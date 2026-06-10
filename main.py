@@ -73,10 +73,11 @@ def menu_funciones_basicas():
     """Sección 1: funciones y procedimientos con tipos simples."""
     print("\n--- Funciones básicas ---")
 
-    # TODO: descomenta cuando hayas completado calcular_iva
-    # valor = 1_500_000
-    # iva = calcular_iva(valor)
-    # mostrar_resultado("IVA sobre $1,500,000", iva)
+    
+    valor = 1500000
+    iva = calcular_iva(valor)
+    
+    mostrar_resultado(f"IVA SOBRE ${valor:,.0F}", iva)
 
     # TODO: descomenta cuando hayas completado formatear_reporte_valor
     # linea = formatear_reporte_valor("900123456", "Empresa ABC S.A.S.", 1_500_000, "ACTIVO")
