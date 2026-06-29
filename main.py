@@ -72,22 +72,25 @@ from src.utils import buscar_por_nit
 def menu_funciones_basicas():
     """Sección 1: funciones y procedimientos con tipos simples."""
     print("\n--- Funciones básicas ---")
-
-    
-    valor = 1500000
+   
+    valor = 800000
     iva = calcular_iva(valor)
+        
+    mostrar_resultado(f"IVA SOBRE ${valor:,.0f}", iva)
     
-    mostrar_resultado(f"IVA SOBRE ${valor:,.0F}", iva)
+    linea= formatear_reporte_valor("900123456", "Empresa ABC SAS", 1_500_000,"ACTIVO")
+    print(f" Reporte: {linea}")
+    
+                                     
 
     # TODO: descomenta cuando hayas completado formatear_reporte_valor
-    # linea = formatear_reporte_valor("900123456", "Empresa ABC S.A.S.", 1_500_000, "ACTIVO")
-    # print(f"  Reporte: {linea}")
+    #linea = formatear_reporte_valor("900123456", "Empresa ABC S.A.S.", 1_500_000, "ACTIVO")
+    #print(f"  Reporte: {linea}")
 
     # TODO: descomenta cuando hayas completado generar_ficha_contribuyente
-    # ficha = generar_ficha_contribuyente(
-    #     "900123456", "Empresa ABC S.A.S.", "Bogota", "202401", 1_500_000, "ACTIVO"
-    # )
-    # print(ficha)
+    ficha = generar_ficha_contribuyente(
+    "900123456", "Empresa ABC S.A.S.", "Bogota", "202401", 1_500_000, "ACTIVO")
+    print(ficha)
     pass
 
 
